@@ -19,7 +19,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get --yes update && \
     apt-get install --yes --no-install-recommends \
             sudo ncurses-bin libncurses5 libncurses6 libtinfo5 libtinfo6 libpython2.7 python2.7 python3 default-jre wget libxml2 \
-            curl build-essential tmux ddd ca-certificates nano vim pkg-config && \
+            curl build-essential tmux ddd ca-certificates nano vim pkg-config gdb && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p "/opt/upmem" && \
