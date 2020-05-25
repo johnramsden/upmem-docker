@@ -22,7 +22,8 @@ RUN apt-get --yes update && \
             curl build-essential tmux ddd ca-certificates nano vim pkg-config gdb git && \
     rm -rf /var/lib/apt/lists/*
 
-RUN echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+     echo "Set disable_coredump false" >> /etc/sudo.conf
 
 RUN mkdir -p "/opt/upmem" && \
     curl "${UPMEM_BASE_URI}/${UPMEM_VER}/ubuntu_18.04/upmem-${UPMEM_VER}-Linux-x86_64.tar.gz" | \
