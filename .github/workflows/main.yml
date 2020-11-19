@@ -14,4 +14,4 @@ jobs:
           username: johnramsden
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: johnramsden/upmem
-          tags: latest,2020.3.0
+          tags: latest,2020.4.0
